@@ -10,5 +10,6 @@ public class Main {
         OperationClass operationClass = new OperationClass();
         operationClass.SellOperation(passenger, ticket);*/
 
+        System.out.println("BUG FIXED");
     }
 }

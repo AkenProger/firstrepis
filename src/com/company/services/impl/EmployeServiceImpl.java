@@ -19,7 +19,11 @@ public class EmployeServiceImpl implements EmployeService {
     @Override
     public boolean changeEmployeStatus(Long id, EmployeStatus newStatus) {
         Employee employee = findEmployeById((long) 133);
-        System.out.println(employee);
+        if (newStatus.name() == EmployeStatus.ACTIVE.name()) {
+            System.out.println("Работает");
+        }else {
+            System.out.println("Не работает!");
+        }
         return false;
     }
 

@@ -6,5 +6,7 @@ public enum EmployeStatus {
     VACATION,
     FIRED,
     DECRET
+
+
 }
 

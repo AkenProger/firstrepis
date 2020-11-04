@@ -7,6 +7,6 @@ import com.company.services.impl.EmployeServiceImpl;
 public class Main {
 
     public static void main(String[] args) {
-        EmployeService.INTANSE.changeEmployeStatus((long) 12, EmployeStatus.VACATION);
+        EmployeService.INTANSE.changeEmployeStatus((long) 12, EmployeStatus.DECRET);
     }
 }

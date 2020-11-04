@@ -11,5 +11,6 @@ public class Main {
         operationClass.SellOperation(passenger, ticket);*/
 
         System.out.println("BUG FIXED");
+        System.out.println("BUG FIXED 2 COUNT+++");
     }
 }

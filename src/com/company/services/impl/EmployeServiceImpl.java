@@ -13,17 +13,22 @@ public class EmployeServiceImpl implements EmployeService {
 
     @Override
     public Employee findEmployeById(Long id) {
-        return new Employee(id, "Hanter", EmployeStatus.ACTIVE);
+        return new Employee(id, "Hanter", EmployeStatus.DECRET);
     }
 
     @Override
     public boolean changeEmployeStatus(Long id, EmployeStatus newStatus) {
         Employee employee = findEmployeById((long) 133);
-        if (newStatus.name() == EmployeStatus.ACTIVE.name()) {
-            System.out.println("Работает");
-        }else {
-            System.out.println("Не работает!");
+        System.out.println(employee.getEmployeStatus());
+        if (employee.getEmployeStatus().equals(EmployeStatus.FIRED) && newStatus.equals(EmployeStatus.VACATION)) {
+            System.out.println("Нельзя отправить в отпуск уволенного человека!");
+        } else if (employee.getEmployeStatus().equals(EmployeStatus.DECRET) && newStatus.equals(EmployeStatus.FIRED)) {
+            System.out.println("Нельзя уволить человека в декрете!");
         }
+        employee.setEmployeStatus(newStatus);
+        System.out.println(employee.getEmployeStatus());
+
+
         return false;
     }
 

@@ -1,5 +1,7 @@
 package com.company.models;
 
+import com.company.enums.FlightStatus;
+
 import java.util.Date;
 import java.util.List;
 
@@ -17,25 +19,30 @@ public class Flight {
     private Plane plane;
     private List<Passenger> passengers;
     public static int count;
+    private FlightStatus flightStatus;
 
-    public static void PrintCount() {
-        System.out.println(count);
+
+
+
+     public Flight(int id, Date outDate, Date toDate, City from, City to, Plane plane, FlightStatus flightStatus) {
+         this.id = id;
+         this.outDate = outDate;
+         this.toDate = toDate;
+         this.from = from;
+         this.to = to;
+         this.plane = plane;
+         this.flightStatus = flightStatus;
+
+
+     }
+    public FlightStatus getFlightStatus() {
+        return flightStatus;
     }
 
-    public Flight() {
-
+    public void setFlightStatus(FlightStatus flightStatus) {
+        this.flightStatus = flightStatus;
     }
 
-    /*  public Flight(int id, Date outDate, Date toDate, City from, City to, Plane plane, List<Passenger> passengers) {
-            this.id = id;
-            this.outDate = outDate;
-            this.toDate = toDate;
-            this.from = from;
-            this.to = to;
-            this.plane = plane;
-            this.passengers = passengers;
-        }
-    */
     public List<Passenger> getPassengers() {
         return passengers;
     }

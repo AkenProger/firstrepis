@@ -16,6 +16,17 @@ public class Employee {
 
     }
 
+    public Employee() {
+
+    }
+
+    public EmployeStatus getEmployeStatus() {
+        return employeStatus;
+    }
+
+    public void setEmployeStatus(EmployeStatus employeStatus) {
+        this.employeStatus = employeStatus;
+    }
 
     public long getId() {
         return id;

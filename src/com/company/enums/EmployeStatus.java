@@ -2,7 +2,7 @@ package com.company.enums;
 
 public enum EmployeStatus {
 
-    ACTIVE,
+    ACTIVE ,
     VACATION,
     FIRED,
     DECRET
